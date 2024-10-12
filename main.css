@@ -153,3 +153,22 @@
     margin: 0 auto 50px;
     display: block;
 }
+.category{
+    display: flex;
+    gap: 20px;
+    padding: 0 50px;
+    overflow: auto;
+    list-style: none;
+    margin-top: 20px;
+}
+.category::-webkit-scrollbar{
+    height: 0;
+}
+.category__item data{
+    display: inline-block;
+    white-space: nowrap;
+    background: #ddd;
+    padding: 8px 10px;
+    border-radius: 10px;
+cursor: pointer;
+}
