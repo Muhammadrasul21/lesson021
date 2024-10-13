@@ -5,12 +5,6 @@
     font-family: sans-serif;
 }
 
-.container {
-    width: 1322px;
-    margin: 0 auto;
-    padding: 16px;
-}
-
 .wrapper {
     display: flex;
     padding: 50px;
