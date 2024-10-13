@@ -5,6 +5,12 @@
     font-family: sans-serif;
 }
 
+.container {
+    width: 1322px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
 .wrapper {
     display: flex;
     padding: 50px;
@@ -16,11 +22,13 @@
 .card {
     width: 250px;
     padding: 10px;
-    border: 1px solid #ddd;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    background: #0e254c;
+    color: #fff;
 }
 
 .card img {
@@ -153,7 +161,8 @@
     margin: 0 auto 50px;
     display: block;
 }
-.category{
+
+.category {
     display: flex;
     gap: 20px;
     padding: 0 50px;
@@ -161,14 +170,63 @@
     list-style: none;
     margin-top: 20px;
 }
-.category::-webkit-scrollbar{
+
+.category::-webkit-scrollbar {
     height: 0;
 }
-.category__item data{
+
+.category__item data {
     display: inline-block;
     white-space: nowrap;
     background: #ddd;
     padding: 8px 10px;
     border-radius: 10px;
-cursor: pointer;
+    cursor: pointer;
+}
+
+.navbar__wrapper {
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+    background: #20b8d8;
+    border-radius: 10px;
+}
+
+.navar__item {
+    list-style: none;
+}
+
+.navbar__logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.navbar__logo img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.navbar__icons {
+    display: flex;
+    gap: 10px;
+}
+
+.category__item data {
+    display: inline-block;
+    background-color: #00a0ff;
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn{
+    border-radius: 20px;
+    border: none;
+    background: #00b5ff;
+    color: #f1f1f1;
+    cursor: pointer;
 }
