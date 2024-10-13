@@ -34,6 +34,7 @@
 .card img {
     width: 100%;
     height: 250px;
+    background: inherit;
     object-fit: contain;
 }
 
@@ -184,37 +185,6 @@
     cursor: pointer;
 }
 
-.navbar__wrapper {
-    height: 50px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 50px;
-    background: #20b8d8;
-    border-radius: 10px;
-}
-
-.navar__item {
-    list-style: none;
-}
-
-.navbar__logo {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.navbar__logo img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-}
-
-.navbar__icons {
-    display: flex;
-    gap: 10px;
-}
-
 .category__item data {
     display: inline-block;
     background-color: #00a0ff;
@@ -223,7 +193,8 @@
     border-radius: 10px;
     cursor: pointer;
 }
-.btn{
+
+.btn {
     border-radius: 20px;
     border: none;
     background: #00b5ff;
