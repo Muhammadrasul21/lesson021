@@ -25,12 +25,11 @@ async function getData(endpoint, count) {
 getData("", offset);
 
 function createProduct(data) {
-    wrapper.innerHTML = '';
     data.products.forEach(product => {
         const card = document.createElement("div");
         card.className = "card";
         card.innerHTML = `
-          <img src="${product.thumbnail}" alt="${product.title}" style="width:100px; height:100px">
+          <img src="${product.thumbnail}" alt="">
           <h3>${product.title}</h3>
           <strong>$${product.price}</strong>
           <button>Buy now</button>
@@ -41,11 +40,11 @@ function createProduct(data) {
 
 btn.addEventListener("click", () => {
     offset++;
-    getData(currentCategory, offset);
+    getData(currentCategory ? `category/${currentCategory}` : "", offset);
 });
 
 async function getCategory() {
-    const response = await fetch(`${BASE_URL}/category-list`);
+    const response = await fetch(`${BASE_URL}/categories`);
     const data = await response.json();
     createCategory(data);
 }
@@ -56,13 +55,14 @@ function createCategory(data) {
         const dataEL = document.createElement("data");
         liEL.className = "category__item";
 
-        dataEL.innerHTML = item;
-        dataEL.setAttribute("value", item);
+        dataEL.innerHTML = item.name;
+        dataEL.setAttribute("value", item.name);
 
         dataEL.addEventListener("click", (e) => {
             const categoryValue = e.target.getAttribute("value");
             currentCategory = categoryValue;
             offset = 1;
+            wrapper.innerHTML = '';
             getData(`category/${categoryValue}`, offset);
         });
 
