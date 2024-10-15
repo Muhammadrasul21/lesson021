@@ -27,9 +27,14 @@ getData("", offset);
 function createProduct(data) {
     data.products.forEach(product => {
         const card = document.createElement("div");
+        card.dataset.id = product.id
         card.className = "card";
         card.innerHTML = `
-          <img src="${product.thumbnail}" alt="">
+           <div>
+            <div>
+              <img src="${product.thumbnail}" class = "card__image" alt="">
+             </div>
+            </div>
           <h3>${product.title}</h3>
           <strong>$${product.price}</strong>
           <button>Buy now</button>
@@ -72,3 +77,16 @@ function createCategory(data) {
 }
 
 getCategory();
+
+
+
+wrapper.addEventListener("click", (event) => {
+    if (event.target.className === "card__image") {
+        let id = event.target.closest(".card").dataset.id
+        open(`/pages/product.html?q=${id}`, "_self")
+    } else {
+        console.log("boshqa yerni bosdingiz");
+
+    }
+
+})
