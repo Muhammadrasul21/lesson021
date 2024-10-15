@@ -37,7 +37,7 @@ function createProduct(data) {
             </div>
           <h3>${product.title}</h3>
           <strong>$${product.price}</strong>
-          <button>Buy now</button>
+          <button class = "bTn" >Buy now</button>
         `;
         wrapper.appendChild(card);
     });
